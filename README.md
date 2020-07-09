@@ -1,6 +1,8 @@
 # TopAffy
 TopAffy is an approach to infer binding preferences for transcription factors without related binding data. TopAffy constructs a  graph to represent DBD protein sequences  and learns binding preferences of neighbouring amino acid pairs to every possible k-mer DNA sequence from PBM data. Given DBD protein sequences and corresponding PBM binding data for some of these sequences, TopAffy explains the binding data using a linear model that adds the binding preferences of neighbouring amino acids weighted by the "purity" of those neighbouring amino acids in TF binding domains.
 
+To run TopAffy make sure the file [Full6merComb.csv](Full6merComb.csv) is on TopAffy working directory.
+
 TopAffy consists of two Python3 scripts: [TopAffyTrain.py](TopAffyTrain.py) and [TopAffyPredict.py](TopAffyPredict.py).
 
 To run first TopAffyTrain.py, one needs to modify the following lines in the script:
@@ -17,7 +19,6 @@ To predict 8-mer binding profile for some TFs, one has to run TopAffyPredict.py.
 * Line 71: variable hmmSeq is a csv containing all the sequences used to build the graph
 
 This will output the predicted 8-mer profiles for the sequences in SeqFile in that order.
-
 
 If you use TopAffy, please cite:
 
