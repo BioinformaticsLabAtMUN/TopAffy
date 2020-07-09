@@ -1,7 +1,7 @@
 # TopAffy
 TopAffy is an approach to infer binding preferences for transcription factors without related binding data. TopAffy constructs a  graph to represent DBD protein sequences  and learns binding preferences of neighbouring amino acid pairs to every possible k-mer DNA sequence from PBM data. Given DBD protein sequences and corresponding PBM binding data for some of these sequences, TopAffy explains the binding data using a linear model that adds the binding preferences of neighbouring amino acids weighted by the "purity" of those neighbouring amino acids in TF binding domains.
 
-TopAffy consists of two Python3 scripts: [TopAffyTrain.py] (TopAffyTrain.py) and [TopAffyPredict.py] (TopAffyPredict.py).
+TopAffy consists of two Python3 scripts: [TopAffyTrain.py](TopAffyTrain.py) and [TopAffyPredict.py](TopAffyPredict.py).
 
 To run first TopAffyTrain.py, one needs to modify the following lines in the script:
 * Line 162: variable SeqFile is a csv containing all the sequences to train the model (i.e., for which there are PBM binding data)
